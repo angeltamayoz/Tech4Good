@@ -23,6 +23,9 @@ public class Product {
     @Column(name = "productIsNew", nullable = false)
     private Boolean productIsNew;
 
+    @Column(name = "location", nullable = false)
+    private String location;
+
     @Column(name = "idCategory", nullable = false)
     private Long idCategory;
 
@@ -35,12 +38,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long idProduct, String productName, String descriptionProduct, Integer quantity, Boolean productIsNew, Long idCategory, LocalDate donationDate, Long idDonor) {
+    public Product(Long idProduct, String productName, String descriptionProduct, Integer quantity, Boolean productIsNew, String location, Long idCategory, LocalDate donationDate, Long idDonor) {
         this.idProduct = idProduct;
         this.productName = productName;
         this.descriptionProduct = descriptionProduct;
         this.quantity = quantity;
         this.productIsNew = productIsNew;
+        this.location = location;
         this.idCategory = idCategory;
         this.donationDate = donationDate;
         this.idDonor = idDonor;
@@ -84,6 +88,14 @@ public class Product {
 
     public void setProductIsNew(Boolean productIsNew) {
         this.productIsNew = productIsNew;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public Long getIdCategory() {
