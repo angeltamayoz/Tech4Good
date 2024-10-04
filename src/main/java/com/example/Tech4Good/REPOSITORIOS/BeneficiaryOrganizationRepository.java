@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BeneficiaryOrganizationRepository extends JpaRepository <BeneficiaryOrganization, Long> {
-
+    BeneficiaryOrganization findByIdentificationNumber (String identificationNumber);
 }

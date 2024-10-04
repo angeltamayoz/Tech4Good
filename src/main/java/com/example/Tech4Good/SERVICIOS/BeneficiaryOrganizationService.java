@@ -8,6 +8,9 @@ public interface BeneficiaryOrganizationService {
     //Consultar todos los beneficiarios
     public List<BeneficiaryOrganization> getAllBeneficiaryOrganizations ();
 
+    //Consultar beneficiario por identification
+    public BeneficiaryOrganization getBeneficiaryOrganizationsByIdentificationNumber (String identificationNumber);
+
     //Crear registro de beneficiarios
     public BeneficiaryOrganization createBeneficiaryOrganization (BeneficiaryOrganization beneficiaryOrganization);
 
@@ -15,5 +18,5 @@ public interface BeneficiaryOrganizationService {
     public BeneficiaryOrganization updateBeneficiaryOrganization (BeneficiaryOrganization beneficiaryOrganization);
 
     //Eliminar beneficiario
-    public Boolean deleteBeneficiaryOrganization (Long idOrganization);
+    public Boolean deleteBeneficiaryOrganization (String identificationNumber);
 }
