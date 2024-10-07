@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DonorsRepository extends JpaRepository <Donors, Long> {
+    Donors findByIdentificationNumber (String identificationNumber);
 }

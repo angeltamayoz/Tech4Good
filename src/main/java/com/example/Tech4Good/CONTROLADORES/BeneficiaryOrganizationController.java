@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/beneficiarios")
-@CrossOrigin("http://localhost:1339/")
+@CrossOrigin("http://localhost:8080/")
 public class BeneficiaryOrganizationController {
 
     @Autowired
