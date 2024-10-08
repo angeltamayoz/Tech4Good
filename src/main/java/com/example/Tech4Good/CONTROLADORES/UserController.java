@@ -11,15 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin("http://localhost:8080/")
+@CrossOrigin("https://zorany26.github.io")
 public class UserController {
     @Autowired
     private UserService userService;
-
-    @GetMapping
-    public ResponseEntity<List<User>> getAllUser(){
-        return new ResponseEntity<>(userService.getAllUser(), HttpStatus.OK);
-    }
 
     @GetMapping("/{userName}")
     public ResponseEntity<User> getUserByName(@PathVariable String userName){

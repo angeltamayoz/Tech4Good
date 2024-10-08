@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/donantes")
-@CrossOrigin("http://localhost:8080/")
+@CrossOrigin("https://zorany26.github.io")
 public class DonorsController {
     @Autowired
     private DonorsService donorsService;
